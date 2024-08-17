@@ -1,38 +1,103 @@
-.App {
+.todoField {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #ffffff, #f1f1f1);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
   text-align: center;
+  color: #333;  
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p{
+  text-align: center;
+  color: grey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type='text'] {
+  width: 80%;
+  padding: 12px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button.add {
+  background: linear-gradient(to right, #28a745, #218838);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+button.delete {
+  background: linear-gradient(to right, #dc3545, #c82333);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.add:hover {
+  background: linear-gradient(to right, #218838, #1e7e34);
+}
+
+
+
+button.delete:hover {
+  background: linear-gradient(to right, #c82333, #b21f2d);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type='checkbox'] {
+  margin-right: 15px;
+}
+
+span {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+button.edit {
+  margin-left: 10px;
+}
+
+button.delete {
+  margin-left: 10px;
 }
